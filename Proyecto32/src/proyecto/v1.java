@@ -32,6 +32,8 @@ public class v1 extends JFrame implements ActionListener {
 	private JTextField txtInventario;
 	private JButton btncomprado;
 	private JButton btnAgregar;
+	private JButton BtnDisminuir;
+	private JButton BtnListar;
 
 	/**
 	 * Launch the application.
@@ -126,8 +128,28 @@ public class v1 extends JFrame implements ActionListener {
 			btnAgregar.setBounds(468, 212, 116, 34);
 			contentPane.add(btnAgregar);
 		}
+		{
+			BtnDisminuir = new JButton("DISMINUIR");
+			BtnDisminuir.addActionListener(this);
+			BtnDisminuir.setBackground(new Color(255, 192, 203));
+			BtnDisminuir.setBounds(468, 261, 116, 34);
+			contentPane.add(BtnDisminuir);
+		}
+		{
+			BtnListar = new JButton("LISTAR");
+			BtnListar.addActionListener(this);
+			BtnListar.setBackground(new Color(255, 192, 203));
+			BtnListar.setBounds(342, 261, 116, 34);
+			contentPane.add(BtnListar);
+		}
 	}
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == BtnDisminuir) {
+			do_btnDisminuir_actionPerformed(e);
+		}
+		if (e.getSource() == BtnListar) {
+			do_btnListar_actionPerformed(e);
+		}
 		if (e.getSource() == btnAgregar) {
 			do_btnAgregar_actionPerformed(e);
 		}
@@ -144,5 +166,9 @@ public class v1 extends JFrame implements ActionListener {
 	protected void do_btncomprado_actionPerformed(ActionEvent e) {
 	}
 	protected void do_btnAgregar_actionPerformed(ActionEvent e) {
+	}
+	protected void do_btnListar_actionPerformed(ActionEvent e) {
+	}
+	protected void do_btnDisminuir_actionPerformed(ActionEvent e) {
 	}
 }
