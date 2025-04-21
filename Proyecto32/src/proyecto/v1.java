@@ -30,6 +30,8 @@ public class v1 extends JFrame implements ActionListener {
 	private JComboBox comboBox_1;
 	private JTextField txtCantidad;
 	private JTextField txtInventario;
+	private JButton btncomprado;
+	private JButton btnAgregar;
 
 	/**
 	 * Launch the application.
@@ -74,6 +76,7 @@ public class v1 extends JFrame implements ActionListener {
 		}
 		{
 			btnBuscar = new JButton("Buscar");
+			btnBuscar.setBackground(new Color(173, 216, 230));
 			btnBuscar.addActionListener(this);
 			btnBuscar.setFont(new Font("Javanese Text", Font.PLAIN, 16));
 			btnBuscar.setBounds(235, 50, 116, 34);
@@ -109,13 +112,37 @@ public class v1 extends JFrame implements ActionListener {
 		txtInventario.setBounds(176, 263, 156, 34);
 		contentPane.add(txtInventario);
 		txtInventario.setColumns(10);
+		{
+			btncomprado = new JButton("COMPRADO");
+			btncomprado.addActionListener(this);
+			btncomprado.setBackground(new Color(255, 192, 203));
+			btncomprado.setBounds(342, 212, 116, 34);
+			contentPane.add(btncomprado);
+		}
+		{
+			btnAgregar = new JButton("AGREGAR");
+			btnAgregar.addActionListener(this);
+			btnAgregar.setBackground(new Color(255, 192, 203));
+			btnAgregar.setBounds(468, 212, 116, 34);
+			contentPane.add(btnAgregar);
+		}
 	}
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnAgregar) {
+			do_btnAgregar_actionPerformed(e);
+		}
+		if (e.getSource() == btncomprado) {
+			do_btncomprado_actionPerformed(e);
+		}
 		if (e.getSource() == btnBuscar) {
 			do_btnBuscar_actionPerformed(e);
 		}
 	}
 	protected void do_btnBuscar_actionPerformed(ActionEvent e) {
 		
+	}
+	protected void do_btncomprado_actionPerformed(ActionEvent e) {
+	}
+	protected void do_btnAgregar_actionPerformed(ActionEvent e) {
 	}
 }
