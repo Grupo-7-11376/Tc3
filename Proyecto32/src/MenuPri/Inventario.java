@@ -161,7 +161,7 @@ public class Inventario extends JFrame implements ActionListener {
 		            
 		        }
 		}catch(Exception e2) {
-			JOptionPane.showMessageDialog(null, "Ingrese numero valido");
+			JOptionPane.showMessageDialog(null, "Ingrese numero valido ");
 		}
 	}
 }
