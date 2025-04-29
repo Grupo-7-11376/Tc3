@@ -10,6 +10,7 @@ import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class VentanaMenu extends JFrame implements ActionListener {
 
@@ -43,19 +44,20 @@ public class VentanaMenu extends JFrame implements ActionListener {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 537, 259);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(245, 222, 179));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		{
 			lblNewLabel = new JLabel("Tienda de peluches ");
-			lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 22));
-			lblNewLabel.setBounds(144, 11, 215, 44);
+			lblNewLabel.setFont(new Font("Javanese Text", Font.PLAIN, 22));
+			lblNewLabel.setBounds(155, 10, 215, 44);
 			contentPane.add(lblNewLabel);
 		}
 		{
 			BtnInventario = new JButton("Inventario");
-			BtnInventario.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			BtnInventario.setFont(new Font("Javanese Text", Font.PLAIN, 16));
 			BtnInventario.addActionListener(this);
 			BtnInventario.setBounds(179, 147, 134, 35);
 			contentPane.add(BtnInventario);
@@ -63,14 +65,14 @@ public class VentanaMenu extends JFrame implements ActionListener {
 		{
 			BtnVenta = new JButton("Venta");
 			BtnVenta.addActionListener(this);
-			BtnVenta.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			BtnVenta.setFont(new Font("Javanese Text", Font.PLAIN, 16));
 			BtnVenta.setBounds(85, 89, 134, 35);
 			contentPane.add(BtnVenta);
 		}
 		{
 			BtnVentaOnline = new JButton("Venta online");
 			BtnVentaOnline.addActionListener(this);
-			BtnVentaOnline.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			BtnVentaOnline.setFont(new Font("Javanese Text", Font.PLAIN, 16));
 			BtnVentaOnline.setBounds(290, 89, 134, 35);
 			contentPane.add(BtnVentaOnline);
 		}
