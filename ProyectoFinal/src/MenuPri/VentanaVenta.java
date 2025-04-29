@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import InventarioPeluches.ArregloPeluches;
+
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
@@ -24,10 +27,10 @@ public class VentanaVenta extends JFrame implements ActionListener {
 	private JButton BtnRegresar;
 	private JLabel lblCodigoDelPeluche;
 	private JLabel lblCantidad;
-	private JTextField TxtCantidad;
+	private JTextField txtCantidad;
 	private JComboBox comboBox;
 	private JScrollPane scrollPane;
-	private JTextArea textArea;
+	private JTextArea txtA_venta;
 	private JLabel lblMetodoDePago;
 	private JRadioButton rdbtnNewRadioButton;
 	private JRadioButton rdbtnFactura;
@@ -35,7 +38,7 @@ public class VentanaVenta extends JFrame implements ActionListener {
 	private JRadioButton rdbtnTarjeta;
 	private JLabel lblTipo;
 	private JLabel lblPrecio;
-	private JTextField TxtPrecio;
+	private JTextField txtPrecio;
 	private JButton BtnAñadir;
 	private JButton BtnCalcular;
 	private JButton BtnComprado;
@@ -88,10 +91,10 @@ public class VentanaVenta extends JFrame implements ActionListener {
 			contentPane.add(lblCantidad);
 		}
 		{
-			TxtCantidad = new JTextField();
-			TxtCantidad.setColumns(10);
-			TxtCantidad.setBounds(194, 75, 158, 31);
-			contentPane.add(TxtCantidad);
+			txtCantidad = new JTextField();
+			txtCantidad.setColumns(10);
+			txtCantidad.setBounds(194, 75, 158, 31);
+			contentPane.add(txtCantidad);
 		}
 		{
 			comboBox = new JComboBox();
@@ -105,8 +108,8 @@ public class VentanaVenta extends JFrame implements ActionListener {
 			scrollPane.setBounds(485, 18, 189, 327);
 			contentPane.add(scrollPane);
 			{
-				textArea = new JTextArea();
-				scrollPane.setViewportView(textArea);
+				txtA_venta = new JTextArea();
+				scrollPane.setViewportView(txtA_venta);
 			}
 		}
 		{
@@ -152,13 +155,14 @@ public class VentanaVenta extends JFrame implements ActionListener {
 			contentPane.add(lblPrecio);
 		}
 		{
-			TxtPrecio = new JTextField();
-			TxtPrecio.setColumns(10);
-			TxtPrecio.setBounds(194, 131, 158, 31);
-			contentPane.add(TxtPrecio);
+			txtPrecio = new JTextField();
+			txtPrecio.setColumns(10);
+			txtPrecio.setBounds(194, 131, 158, 31);
+			contentPane.add(txtPrecio);
 		}
 		{
 			BtnAñadir = new JButton("Añadir");
+			BtnAñadir.addActionListener(this);
 			BtnAñadir.setFont(new Font("Tahoma", Font.PLAIN, 16));
 			BtnAñadir.setBounds(10, 299, 109, 39);
 			contentPane.add(BtnAñadir);
@@ -178,6 +182,9 @@ public class VentanaVenta extends JFrame implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == BtnAñadir) {
+			do_btnAñadir_actionPerformed(e);
+		}
 		if (e.getSource() == BtnRegresar) {
 			do_btnRegresar_actionPerformed(e);
 		}
@@ -187,5 +194,20 @@ public class VentanaVenta extends JFrame implements ActionListener {
 		VentanaMenu newframe = new VentanaMenu();
 		newframe.setVisible(true);
 		this.dispose();
+	}
+	
+	ArregloPeluches arr = new ArregloPeluches();
+
+	protected void do_btnAñadir_actionPerformed(ActionEvent e) {
+		Imprimir();
+	}
+	
+	void Imprimir(String s)
+	{
+		txtA_venta.append("\n"+s);
+	}
+	void Imprimir()
+	{
+	   Imprimir("La cantidad de Productos: "+txtCantidad.getText());
 	}
 }

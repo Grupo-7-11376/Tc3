@@ -24,5 +24,9 @@ public class ArregloPeluches {
 	public int Tamaño() {
 	    return pelu.size();
 	}
+	public Peluches Obtener(int x)
+	{
+		return pelu.get(x);
+	}
 	
 }
