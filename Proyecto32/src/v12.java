@@ -71,7 +71,7 @@ public class v12 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnProcesar.setBounds(234, 12, 85, 21);
+		btnProcesar.setBounds(216, 12, 85, 21);
 		contentPane.add(btnProcesar);
 		
 		JLabel lblNewLabel_1 = new JLabel("Cantidad a comprar");
@@ -97,12 +97,8 @@ public class v12 extends JFrame {
 		contentPane.add(btncomprado);
 		
 		JButton btnAgregar = new JButton("Agregar");
-		btnAgregar.setBounds(313, 66, 85, 21);
+		btnAgregar.setBounds(216, 97, 85, 21);
 		contentPane.add(btnAgregar);
-		
-		JButton btnListar = new JButton("Listar");
-		btnListar.setBounds(216, 97, 85, 21);
-		contentPane.add(btnListar);
 		
 		JButton btnDisminuir = new JButton("Disminuir");
 		btnDisminuir.addActionListener(new ActionListener() {
