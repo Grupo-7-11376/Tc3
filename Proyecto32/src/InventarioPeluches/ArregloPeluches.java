@@ -7,7 +7,7 @@ public class ArregloPeluches {
 	private ArrayList<Peluches>pelu;
 	public ArregloPeluches() {
 		pelu=new ArrayList<Peluches>();
-	Adicionar(new Peluches(100,"Eevee",20,50.0));
+	Adicionar(new Peluches(100,"Eevee",20,55.0));
 	Adicionar(new Peluches(110,"Espeon",20,40.0));
 	Adicionar(new Peluches(120,"Glaceon",20,80.0));
 	Adicionar(new Peluches(130,"Sylveon",20,70.0));
