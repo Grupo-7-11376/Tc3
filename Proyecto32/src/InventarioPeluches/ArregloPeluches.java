@@ -14,7 +14,7 @@ public class ArregloPeluches {
 	Adicionar(new Peluches(140,"Jolteon",20,10.0));
 	Adicionar(new Peluches(150,"Vaporeon",20,70.0));
 	Adicionar(new Peluches(160,"Leafeon",20,90.0));
-	Adicionar(new Peluches(170,"Flareon",20,49.0));
+	Adicionar(new Peluches(170,"Flareon",20,48.0));
 	Adicionar(new Peluches(180,"umbreon",20,60.0));
 	}
 	
