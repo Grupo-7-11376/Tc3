@@ -103,7 +103,8 @@ public class VentanaMenu extends JFrame implements ActionListener {
 	protected void do_btnVentaOnline_actionPerformed(ActionEvent e) {
 	
 		VentanaVentaOnline newframe = new VentanaVentaOnline();
-		newframe.setVisible(true);
+		newframe.setVisible(false);
 		this.dispose();
+		fafasfadsf
 	}
 }
